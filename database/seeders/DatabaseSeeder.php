@@ -2,8 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,11 +11,20 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        $seeders = [
+            __NAMESPACE__ . '\\KategoriSeeder',
+            __NAMESPACE__ . '\\PelangganSeeder',
+            ProdukSeeder::class,
+            TransaksiSeeder::class,
+        ];
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        // Seeder kategori dan pelanggan dimiliki bagian tugas lain.
+        // Panggil otomatis saat file seeder tersebut sudah tersedia.
+        $availableSeeders = array_values(array_filter(
+            $seeders,
+            fn (string $seeder): bool => class_exists($seeder),
+        ));
+
+        $this->call($availableSeeders);
     }
 }
