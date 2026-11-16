@@ -1,6 +1,20 @@
+<<<<<<< HEAD
 /.coveralls.yml export-ignore
 /.gush.yml export-ignore
 /.travis.yml export-ignore
 /.github export-ignore
 /tests export-ignore
 
+=======
+* text=auto eol=lf
+
+*.blade.php diff=html
+*.css diff=css
+*.html diff=html
+*.md diff=markdown
+*.php diff=php
+
+/.github export-ignore
+CHANGELOG.md export-ignore
+.styleci.yml export-ignore
+>>>>>>> 7852ec3e701ca6a29b3a612aa59e0de9ddcd5cb7

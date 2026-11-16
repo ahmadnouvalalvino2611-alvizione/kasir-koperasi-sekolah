@@ -1,7 +1,10 @@
 @extends('layouts.app')
 @section('title', 'Tambah Transaksi')
 @section('content')
+<<<<<<< HEAD
 @include('partials.alerts')
+=======
+>>>>>>> 7852ec3e701ca6a29b3a612aa59e0de9ddcd5cb7
 <div class="card"><div class="card-body">
     <h1 class="h3 mb-4">Tambah Transaksi</h1>
     <form action="{{ route('transaksi.store') }}" method="POST">

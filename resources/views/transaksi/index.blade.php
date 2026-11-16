@@ -1,7 +1,10 @@
 @extends('layouts.app')
 @section('title', 'Daftar Transaksi')
 @section('content')
+<<<<<<< HEAD
 @include('partials.alerts')
+=======
+>>>>>>> 7852ec3e701ca6a29b3a612aa59e0de9ddcd5cb7
 <div class="d-flex justify-content-between align-items-center mb-3">
     <h1 class="h3 mb-0">Daftar Transaksi</h1>
     <a href="{{ route('transaksi.create') }}" class="btn btn-primary">Tambah Transaksi</a>
@@ -31,6 +34,10 @@
         @endforelse
         </tbody>
     </table>
+<<<<<<< HEAD
     {{ $transaksis->links('pagination::bootstrap-5') }}
+=======
+    {{ $transaksis->links() }}
+>>>>>>> 7852ec3e701ca6a29b3a612aa59e0de9ddcd5cb7
 </div></div>
 @endsection

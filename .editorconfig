@@ -1,12 +1,32 @@
+<<<<<<< HEAD
 ; This file is for unifying the coding style for different editors and IDEs.
 ; More information at http://editorconfig.org
 
+=======
+>>>>>>> 7852ec3e701ca6a29b3a612aa59e0de9ddcd5cb7
 root = true
 
 [*]
 charset = utf-8
+<<<<<<< HEAD
 indent_size = 4
 indent_style = space
 end_of_line = lf
 insert_final_newline = true
 trim_trailing_whitespace = true
+=======
+end_of_line = lf
+indent_size = 4
+indent_style = space
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.md]
+trim_trailing_whitespace = false
+
+[*.{yml,yaml}]
+indent_size = 2
+
+[docker-compose.yml]
+indent_size = 4
+>>>>>>> 7852ec3e701ca6a29b3a612aa59e0de9ddcd5cb7

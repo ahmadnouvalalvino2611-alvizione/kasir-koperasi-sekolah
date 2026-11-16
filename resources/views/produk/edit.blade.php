@@ -1,7 +1,10 @@
 @extends('layouts.app')
 @section('title', 'Edit Produk')
 @section('content')
+<<<<<<< HEAD
 @include('partials.alerts')
+=======
+>>>>>>> 7852ec3e701ca6a29b3a612aa59e0de9ddcd5cb7
 <div class="card"><div class="card-body">
     <h1 class="h3 mb-4">Edit Produk</h1>
     <form action="{{ route('produk.update', $produk) }}" method="POST">
@@ -10,7 +13,11 @@
             <select id="kategori_id" name="kategori_id" class="form-select" required>
                 <option value="">Pilih kategori</option>
                 @foreach ($kategoris as $kategori)
+<<<<<<< HEAD
                     <option value="{{ $kategori->id }}" @selected(old('kategori_id', $produk->kategori_id) == $kategori->id)>{{ $kategori->nama }}</option>
+=======
+                    <option value="{{ $kategori->id }}" @selected(old('kategori_id', $produk->kategori_id) == $kategori->id)>{{ $kategori->nama_kategori }}</option>
+>>>>>>> 7852ec3e701ca6a29b3a612aa59e0de9ddcd5cb7
                 @endforeach
             </select>
         </div>
