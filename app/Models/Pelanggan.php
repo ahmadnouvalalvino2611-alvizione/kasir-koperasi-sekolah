@@ -9,7 +9,7 @@ class Pelanggan extends Model
 {
     protected $table = 'pelanggan';
 
-    protected $fillable = ['nama_pelanggan'];
+    protected $fillable = ['nama', 'tipe', 'no_hp'];
 
     public function transaksis(): HasMany
     {

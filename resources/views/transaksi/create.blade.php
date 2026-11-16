@@ -19,7 +19,7 @@
             <select id="pelanggan_id" name="pelanggan_id" class="form-select" required>
                 <option value="">Pilih pelanggan</option>
                 @foreach ($pelanggans as $pelanggan)
-                    <option value="{{ $pelanggan->id }}" @selected(old('pelanggan_id') == $pelanggan->id)>{{ $pelanggan->nama_pelanggan }}</option>
+                    <option value="{{ $pelanggan->id }}" @selected(old('pelanggan_id') == $pelanggan->id)>{{ $pelanggan->nama }}</option>
                 @endforeach
             </select>
         </div>

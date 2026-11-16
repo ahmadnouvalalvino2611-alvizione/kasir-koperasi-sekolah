@@ -21,7 +21,7 @@ class TransaksiController extends Controller
     {
         return view('transaksi.create', [
             'produks' => Produk::orderBy('nama_produk')->get(),
-            'pelanggans' => Pelanggan::orderBy('nama_pelanggan')->get(),
+            'pelanggans' => Pelanggan::orderBy('nama')->get(),
         ]);
     }
 
@@ -61,7 +61,7 @@ class TransaksiController extends Controller
         return view('transaksi.edit', [
             'transaksi' => $transaksi->load(['produk', 'pelanggan']),
             'produks' => Produk::orderBy('nama_produk')->get(),
-            'pelanggans' => Pelanggan::orderBy('nama_pelanggan')->get(),
+            'pelanggans' => Pelanggan::orderBy('nama')->get(),
         ]);
     }
 

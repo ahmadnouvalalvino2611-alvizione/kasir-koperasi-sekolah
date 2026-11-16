@@ -2,29 +2,30 @@
 
 namespace Database\Seeders;
 
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
-    /**
-     * Seed the application's database.
-     */
     public function run(): void
     {
+        User::factory()->create([
+            'name' => 'Test User',
+            'email' => 'test@example.com',
+        ]);
+
+        // Run in foreign-key dependency order. Category seeder is optional
+        // because it is maintained by the other project module.
         $seeders = [
             __NAMESPACE__ . '\\KategoriSeeder',
-            __NAMESPACE__ . '\\PelangganSeeder',
+            PelangganSeeder::class,
             ProdukSeeder::class,
             TransaksiSeeder::class,
         ];
 
-        // Seeder kategori dan pelanggan dimiliki bagian tugas lain.
-        // Panggil otomatis saat file seeder tersebut sudah tersedia.
-        $availableSeeders = array_values(array_filter(
+        $this->call(array_values(array_filter(
             $seeders,
             fn (string $seeder): bool => class_exists($seeder),
-        ));
-
-        $this->call($availableSeeders);
+        )));
     }
 }

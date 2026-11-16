@@ -17,7 +17,7 @@
         <div class="mb-3"><label for="pelanggan_id" class="form-label">Pelanggan</label>
             <select id="pelanggan_id" name="pelanggan_id" class="form-select" required>
                 @foreach ($pelanggans as $pelanggan)
-                    <option value="{{ $pelanggan->id }}" @selected(old('pelanggan_id', $transaksi->pelanggan_id) == $pelanggan->id)>{{ $pelanggan->nama_pelanggan }}</option>
+                    <option value="{{ $pelanggan->id }}" @selected(old('pelanggan_id', $transaksi->pelanggan_id) == $pelanggan->id)>{{ $pelanggan->nama }}</option>
                 @endforeach
             </select>
         </div>

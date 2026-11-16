@@ -14,7 +14,7 @@
                 <td>{{ $transaksis->firstItem() + $loop->index }}</td>
                 <td>{{ $item->tanggal->format('d-m-Y') }}</td>
                 <td>{{ $item->produk->nama_produk ?? 'Produk dihapus' }}</td>
-                <td>{{ $item->pelanggan->nama_pelanggan ?? 'Pelanggan dihapus' }}</td>
+                <td>{{ $item->pelanggan->nama ?? 'Pelanggan dihapus' }}</td>
                 <td>{{ $item->jumlah }}</td>
                 <td>Rp {{ number_format($item->total, 0, ',', '.') }}</td>
                 <td class="text-nowrap">
