@@ -16,11 +16,7 @@ class ProdukController extends Controller
 
     public function create()
     {
-<<<<<<< HEAD
         $kategoris = Kategori::query()->orderBy('nama')->get();
-=======
-        $kategoris = Kategori::query()->orderBy('nama_kategori')->get();
->>>>>>> 7852ec3e701ca6a29b3a612aa59e0de9ddcd5cb7
         return view('produk.create', compact('kategoris'));
     }
 
@@ -41,11 +37,7 @@ class ProdukController extends Controller
 
     public function edit(Produk $produk)
     {
-<<<<<<< HEAD
         $kategoris = Kategori::query()->orderBy('nama')->get();
-=======
-        $kategoris = Kategori::query()->orderBy('nama_kategori')->get();
->>>>>>> 7852ec3e701ca6a29b3a612aa59e0de9ddcd5cb7
         return view('produk.edit', compact('produk', 'kategoris'));
     }
 

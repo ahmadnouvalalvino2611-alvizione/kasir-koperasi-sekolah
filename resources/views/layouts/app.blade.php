@@ -7,7 +7,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="bg-light">
-<<<<<<< HEAD
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
             <a class="navbar-brand" href="{{ route('dashboard') }}">Kasir Koperasi</a>
@@ -32,36 +31,6 @@
     </nav>
 
     <main class="container py-4">
-=======
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
-        <div class="container">
-            <a class="navbar-brand" href="{{ route('produk.index') }}">Kasir Koperasi</a>
-            <div class="navbar-nav">
-                <a class="nav-link" href="{{ route('pelanggan.index') }}">Pelanggan</a>
-                <a class="nav-link" href="{{ route('produk.index') }}">Produk</a>
-                <a class="nav-link" href="{{ route('transaksi.index') }}">Transaksi</a>
-            </div>
-        </div>
-    </nav>
-
-    <main class="container pb-5">
-        @if (session('success'))
-            <div class="alert alert-success">{{ session('success') }}</div>
-        @endif
-        @if (session('error'))
-            <div class="alert alert-danger">{{ session('error') }}</div>
-        @endif
-        @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul class="mb-0">
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
-
->>>>>>> 7852ec3e701ca6a29b3a612aa59e0de9ddcd5cb7
         @yield('content')
     </main>
 
