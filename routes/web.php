@@ -8,3 +8,7 @@ Route::get('/', function () {
 });
 
 Route::resource('pelanggan', PelangganController::class);
+
+Route::get('/dashboard', function () {
+    return view('Dashboard.index');
+})->name('dashboard');
